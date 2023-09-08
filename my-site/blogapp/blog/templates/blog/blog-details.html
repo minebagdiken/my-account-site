@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title%}Blog Details  {% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="row">
+        
+        <div class="col-12">
+            <div class="card mb-3">
+                <div class="row">
+                    <div class="col-md-3"> 
+                        <img src="{% static 'img/'|add:blog.image %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-md-9">
+                        <div class="card-body">
+                            <h5 class="card-title">
+                            
+                                    <!-- blog detaylarını burdan aldık id ile tıkladığımızda gelenler -->
+                                    {{blog.title}} 
+                                </a>
+                        
+                            </h5>
+                            <!-- blog html ile aynı da views.py den geliyor -->
+                                 <p class="card-text">{{blog.description}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+    </div> 
+
+</div>
+
+{% endblock %}

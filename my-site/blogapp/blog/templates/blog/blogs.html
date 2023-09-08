@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title%}Blogs {% endblock %}
+
+{% block content %}
+
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-3">
+            <!DOCTYPE html>
+<html>
+<head>
+<style>
+  .custom-heading {
+    font-size: 25px;
+    color: green;
+    padding-left: 20px; /* Sol taraftan 20 piksel boşluk bırakır */
+  }
+</style>
+</head>
+<body>
+
+<h1 class="custom-heading">Company Role</h1>
+
+</body>
+</html>
+
+            
+            {% include 'partials/_categories.html'%}
+        </div>
+        <div class="col-9">
+          <!DOCTYPE html>
+          <html>
+          <head>
+          <style>
+            .custom-heading {
+              font-size: 25px;
+              color: green;
+              padding-left: 20px; /* Sol taraftan 20 piksel boşluk bırakır */
+            }
+          </style>
+          </head>
+          <body>
+          
+          <h1 class="custom-heading">All Profiles</h1>
+          
+          </body>
+          </html>
+            <hr>
+            {% for blog in blogs %}
+            {% include 'blog/partials/_blog.html' %}
+         {% endfor %}
+    </div> 
+
+</div>
+
+{% endblock %}
